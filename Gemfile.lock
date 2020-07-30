@@ -102,6 +102,8 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogiri (1.10.10-x86-mingw32)
       mini_portile2 (~> 2.4.0)
+    nouislider-rails (8.2.1)
+      railties (>= 3.1)
     pg (1.2.3-x64-mingw32)
     pg (1.2.3-x86-mingw32)
     public_suffix (4.0.5)
@@ -202,6 +204,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   jbuilder (~> 2.7)
+  nouislider-rails
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
