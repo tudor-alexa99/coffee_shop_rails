@@ -1,5 +1,5 @@
-# Load the Rails javascript.
+# Load the Rails application.
 require_relative 'application'
 
-# Initialize the Rails javascript.
+# Initialize the Rails application.
 Rails.application.initialize!
