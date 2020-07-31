@@ -15,231 +15,240 @@ html
   background-color: $ternary-color
   scroll-behavior: smooth
 
-  body
-    margin: 0
-    height: 100%
+body
+  margin: 0
+  height: 100%
 
-    header
-      margin-bottom: 0
-      background-image: url(asset_path("background_3.jpg"))
-      background-repeat: no-repeat
-      background-attachment: fixed
-      background-size: inherit
-      background-position-x: -50px
+p
+  font-family: $text-font
+header
+  margin-bottom: 0
+  background-image: url(asset_path("background_3.jpg"))
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-size: cover
+  background-position-y: -10px
 
-      #navbar-top
-        display: flex
-        justify-content: space-around
-        padding: 10px
+  ul
+    min-width: 100px
+    color: $bright-text
+    overflow: auto
 
-        #logo-container
-          display: flex
-          color: $bright-text
-          font-family: $titles-font
-          font-size: 15px
+  li
+    display: inline
+    margin-left: 1em
 
-          #logo
-            max-width: 70px
-            max-height: 70px
-            border-radius: 51%
+  a
+    text-decoration: none
+    color: $bright-text
+    cursor: pointer
 
-        ul
-          min-width: 100px
-          color: $bright-text
-          overflow: auto
+#navbar-top
+  display: flex
+  justify-content: space-around
+  padding: 10px
 
-          li
-            display: inline
-            margin-left: 1em
+#logo-container
+  display: flex
+  color: $bright-text
+  font-family: $titles-font
+  font-size: 15px
 
-            a
-              text-decoration: none
-              color: $bright-text
-              cursor: pointer
+#logo
+  max-width: 70px
+  max-height: 70px
+  border-radius: 51%
 
-          .bullet
-            width: $bullet-size
-            height: $bullet-size
-            margin: auto
+.bullet
+  width: $bullet-size
+  height: $bullet-size
+  margin: auto
 
-      #header-content
-        display: flex
-        flex-direction: column
-        padding: 0 10px 60px 0
-        width: 70%
-        max-height: 70%
-        margin: auto
-        justify-content: center
-        align-items: center
+#header-content
+  display: flex
+  flex-direction: column
+  padding: 0 10px 60px 0
+  width: 70%
+  max-height: 70%
+  margin: auto
+  justify-content: center
+  align-items: center
 
-        #page-title
-          color: $bright-text
-          font-family: $titles-font
-          font-size: 50px
+#page-title
+  color: $bright-text
+  font-family: $titles-font
+  font-size: 50px
 
-        #dining-room-icon
-          margin: auto
-          justify-self: center
-          padding: 0 40px
-          width: 26px
-          height: 26px
+#dining-room-icon
+  margin: auto
+  justify-self: center
+  padding: 0 40px
+  width: 26px
+  height: 26px
 
-        #rounded-line-container
-          display: flex
-          justify-content: space-evenly
+#rounded-line-container
+  display: flex
+  justify-content: space-evenly
 
-        .holder
-          position: relative
-          width: 350px
-          height: 50px
-          padding: 0
-          align-items: center
+.holder
+  position: relative
+  width: 350px
+  height: 50px
+  padding: 0
+  align-items: center
 
-        .smallLine
-          position: absolute
-          height: 10px
-          width: 200%
-          transform: translate(-25%) scale(0.5)
-          margin-top: 20px
+.smallLine
+  position: absolute
+  height: 10px
+  width: 200%
+  transform: translate(-25%) scale(0.5)
+  margin-top: 20px
 
-        .smallLine1
-          background: linear-gradient(45deg, transparent, transparent 49%, $rounded-line-color 40%, transparent 60%)
+.smallLine1
+  background: linear-gradient(45deg, transparent, transparent 49%, $rounded-line-color 40%, transparent 60%)
 
-        .smallLine2
-          background: linear-gradient(-45deg, transparent, transparent 49%, $rounded-line-color 40%, transparent 60%)
+.smallLine2
+  background: linear-gradient(-45deg, transparent, transparent 49%, $rounded-line-color 40%, transparent 60%)
 
-        .smallLine
-          background-size: 20px 20px
+.smallLine
+  background-size: 20px 20px
 
-        #latin-text
-          font-family: $text-font
-          color: $bright-text
-          text-align: center
+#latin-text
+  font-family: $text-font
+  color: $bright-text
+  text-align: center
 
-    main
-      padding-top: 0
-      margin-top: 0
-      height: 100%
+main
+  padding-top: 0
+  margin-top: 0
+  height: 100%
 
-      #navbar-bottom
-        background-color: $ternary-color
-        width: 100%
-        display: flex
-        margin-bottom: 0
-        justify-content: space-around
-        align-items: center
+#navbar-bottom
+  background-color: $ternary-color
+  width: 100%
+  display: flex
+  margin-bottom: 0
+  justify-content: space-around
+  align-items: center
 
-        #bottom-menu
-          li
-            display: inline
-            font-family: $text-font
-            margin: 0 5px
+#bottom-menu
+  li
+    display: inline
+    font-family: $text-font
+    margin: 0 5px
 
-            .expand-arrow
-              width: $expand-size
-              height: $expand-size
-              cursor: pointer
+.expand-arrow
+  width: $expand-size
+  height: $expand-size
+  cursor: pointer
 
-        #slider-container
-          display: flex
-          justify-content: center
-          align-items: center
-          width: 500px
+#slider-container
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 500px
 
-          #slider
-            -webkit-appearance: none
-            width: 60%
-            height: 6px
-            border-radius: 2px
-            background: $secondary-color
-            outline: none
-            opacity: 0.7
-            -webkit-transition: .2s
-            transition: opacity .2s
+#slider
+  -webkit-appearance: none
+  width: 60%
+  height: 6px
+  border-radius: 2px
+  background: $secondary-color
+  outline: none
+  opacity: 0.7
+  -webkit-transition: .2s
+  transition: opacity .2s
 
-          #slider:hover
-            opacity: 1
+  #slider:hover
+    opacity: 1
 
-          .noUi-handle::before ::after
-            display: none
+  .noUi-handle::before ::after
+    display: none
 
-          .noUi-handle
-            width: 20px
-            height: 20px
-            border-radius: 50%
-            background: #1a3442
-            cursor: pointer
+  .noUi-handle
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    background: #1a3442
+    cursor: pointer
 
-          .noUi-touch-area
-            width: 15px
-            height: 15px
-            border-radius: 50%
-            background: #1a3442
-            cursor: pointer
+  .noUi-touch-area
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    background: #1a3442
+    cursor: pointer
 
-          .noUi-connect
-            background-color: $accent-color
+  .noUi-connect
+    background-color: $accent-color
 
-          .noUi-handle:before
-            display: none
+  .noUi-handle:before
+    display: none
 
-          .noUi-handle:after
-            display: none
+  .noUi-handle:after
+    display: none
 
-          p
-            font-family: $text-font
+#price
+  padding-right: 4px
 
-          #price
-            padding-right: 4px
+#all-dishes-container
+  display: grid
+  grid-template-columns: $dish-size $dish-size $dish-size $dish-size
+  background-color: $secondary-color
+  max-width: 4 * $dish-size
+  min-width: 2 * $dish-size
+  height: 100%
+  margin: 0 auto
 
-      #all-dishes-container
-        display: flex
-        justify-content: flex-start
-        flex-wrap: wrap
-        background-color: $secondary-color
-        //background-color: red
-        max-width: 4 * $dish-size
-        min-width: 2 * $dish-size
-        height: 100%
-        margin: 0 auto
+.dish-container
+  max-width: 33%
+  min-width: $dish-size
+  padding: 10px 0 0
+  box-shadow: 9px 15px 12px -15px rgba(130, 130, 130, 0.75)
+  //background-color: $secondary-color
+  max-height: 450px
+  cursor: pointer
+  transition: all 0.7s ease-in-out
 
-        .dish-container
-          max-width: 33%
-          min-width: $dish-size
-          padding: 10px 0 0
-          box-shadow: 9px 15px 12px -15px rgba(130, 130, 130, 0.75)
-          //background-color: $secondary-color
-          max-height: 450px
-          cursor: pointer
-          transition: all 0.7s ease-in-out
+.dish
+  border-radius: 50%
+  width: $dish-size
+  height: $dish-size
 
-          .dish
-            border-radius: 50%
-            width: $dish-size
-            height: $dish-size
+.dish-name
+  font-family: $text-font
+  font-size: 25px
+  text-align: center
+  color: #1a3442
+  font-weight: bold
 
-          .dish-name
-            font-family: $text-font
-            font-size: 25px
-            text-align: center
-            color: #1a3442
-            font-weight: bold
+.dish-category
+  font-family: $text-font
+  font-size: 18px
+  text-align: center
+  color: lightgrey
 
-          .dish-category
-            font-family: $text-font
-            font-size: 18px
-            text-align: center
-            color: lightgrey
+.dish-price
+  font-family: $text-font
+  font-size: 20px
+  font-weight: bold
+  text-align: center
+  color: $accent-color
+  letter-spacing: 0.2em
+  padding-bottom: 0
 
-          .dish-price
-            font-family: $text-font
-            font-size: 20px
-            font-weight: bold
-            text-align: center
-            color: $accent-color
-            letter-spacing: 0.2em
-            padding-bottom: 0
+.dish-container:hover
+  transform: scale(1.05)
+  z-index: 1.1
 
-        .dish-container:hover
-          transform: scale(1.05)
-          z-index: 1.1
+@media (max-width: 1000px)
+  #all-dishes-container
+    display: grid
+    grid-template-columns: $dish-size $dish-size $dish-size
+    width: 3 * $dish-size
+
+@media (max-width: 750px)
+  #all-dishes-container
+    display: grid
+    grid-template-columns: $dish-size $dish-size
+    width: 2 * $dish-size
