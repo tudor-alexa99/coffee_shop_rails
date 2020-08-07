@@ -1,3 +1,5 @@
+<!--this has to be populated dynamically-->
+
 <div id="all-dishes-container">
   <div class="dish-container">
     <%= image_tag "dishes/dish_1.png", class: "dish", alt: "dish" %>
@@ -28,5 +30,22 @@
     <p class="dish-name">Veggie Salad</p>
     <p class="dish-category">Entrees</p>
     <p class="dish-price">$7.00</p>
+  </div>
+  <% @dishes.each do |d| %>
+    <div class="dish-container">
+      <%= image_tag d.image, class: "dish", alt: "dish" %>
+      <p class="dish-name"><%= d[:title] %></p>
+      <p class="dish-category"><%= d[:category] %></p>
+      <p class="dish-price">$ <%= d[:price] %>.00</p>
+    </div>
+  <% end %>
+  <div class="dish-container">
+    <%= form_with model: @dish, local: true do |f| %>
+      <%= f.text_field :title, placeholder: "Title" %>
+      <%= f.text_field :category, placeholder: "Category" %>
+      <%= f.text_field :price, placeholder: "Price" %>
+      <%= f.submit "Create", class: "submit-button" %>
+      <%= f.file_field :image %>
+    <% end %>
   </div>
 </div>
