@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :users
   resources :home_page
   resources :dishes
+  resources :carts, only: [:show]
 end
