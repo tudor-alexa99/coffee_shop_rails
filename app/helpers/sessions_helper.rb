@@ -37,4 +37,9 @@ module SessionsHelper
     reset_session
     @current_user = nil
   end
+
+  # Log in as a particular user
+  def log_in_as(user)
+    session[:user_id] = user.id
+  end
 end
