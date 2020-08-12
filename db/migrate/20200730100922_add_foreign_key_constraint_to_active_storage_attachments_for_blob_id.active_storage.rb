@@ -6,6 +6,10 @@ class AddForeignKeyConstraintToActiveStorageAttachmentsForBlobId < ActiveRecord:
     if table_exists?(:active_storage_blobs)
       add_foreign_key :active_storage_attachments, :active_storage_blobs, column: :blob_id
     end
-  #  TODO: define 'down' method in case of a rollback
+  end
+
+  def down
+    # todo: added the down method, I require some feedback on this
+    remove_foreign_key :active_storage_blobs, :active_storage_blobs, column: :blob_id
   end
 end

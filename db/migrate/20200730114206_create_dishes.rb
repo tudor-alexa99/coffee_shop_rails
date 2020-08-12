@@ -1,5 +1,5 @@
 class CreateDishes < ActiveRecord::Migration[6.0]
-  def change
+  def up
     create_table :dishes do |t|
       t.string :title
       t.text :category
@@ -7,5 +7,9 @@ class CreateDishes < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+  end
+
+  def down
+    drop_table :dishes
   end
 end
