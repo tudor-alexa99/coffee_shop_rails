@@ -5,9 +5,9 @@
       <p class="dish-name"><%= d[:title] %></p>
       <p class="dish-category"><%= d[:category] %></p>
       <p class="dish-price">$ <%= d[:price] %>.00</p>
-<!--      todo: <button> Add to cart </button> -->
-<!--      todo: <input type = number> quantity:  </input> -->
-<!--      todo: Intreaba cum functioneaza actiunea de add to cart -->
+      <% if logged_in? %>
+        <%= form_with model: .create %>
+      <% end %>
     </div>
   <% end %>
   <div class="dish-container">
