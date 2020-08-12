@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :home_page
   resources :dishes
-  resources :carts, only: [:show]
+  resources :carts, only: [:show] do
+    post 'add' # todo: check if this works for the add to cart button
+  end
 end
