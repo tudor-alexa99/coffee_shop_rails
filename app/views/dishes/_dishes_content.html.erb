@@ -6,6 +6,16 @@
       <p class="dish-category"><%= d[:category] %></p>
       <p class="dish-price">$ <%= d[:price] %>.00</p>
       <% if logged_in? %>
+<!--        todo: adauga 2 controllere -->
+        <%= form_with url: add_to_cart_carts_path, model: Cart.create do |f| %>
+          <%= f.label :quantity %>
+          <%= f.number_field :quantity %>
+
+          <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+          <%= f.hidden_field :dish_id, value: d.id %>
+
+          <%= f.submit 'Add to cart', class: 'btn btn-secondary mt-2' %>
+        <% end %>
       <% end %>
     </div>
   <% end %>
