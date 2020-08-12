@@ -6,7 +6,6 @@
       <p class="dish-category"><%= d[:category] %></p>
       <p class="dish-price">$ <%= d[:price] %>.00</p>
       <% if logged_in? %>
-        <%= form_with model: .create %>
       <% end %>
     </div>
   <% end %>
