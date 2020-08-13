@@ -1,4 +1,8 @@
 class CartItemsController < ApplicationController
+  def index
+    @cart_items = current_user.cart.cart_items
+  end
+
   def new
     @cart_item = CartItem.new
   end
@@ -10,7 +14,7 @@ class CartItemsController < ApplicationController
   def create
     @cart_item = CartItem.new(cart_item_params)
     if @cart_item.save
-      flash[:danger] = 'Item added to your cart!'
+      flash[:success] = "Item added to your cart!"
       redirect_to root_path
     else
       flash[:danger] = 'Could not add item to the basket!'

@@ -5,7 +5,7 @@ html
 
 body
   margin: 0
-  height: 100%
+  height: auto
 
 p
   font-family: $text-font
@@ -241,3 +241,8 @@ main
     display: grid
     grid-template-columns: $dish-size $dish-size
     width: 2 * $dish-size
+
+@media screen and (max-width: 500px)
+  body
+    width: min-content
+    height: auto

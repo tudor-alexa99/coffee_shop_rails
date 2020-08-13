@@ -1,0 +1,44 @@
+// Place all the styles related to the CartItems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.cart-row
+  display: flex
+  align-items: center
+  background-color: $secondary-color
+  opacity: 0.8
+  border-radius: 1em
+  margin: 1em 1em
+  transition: 0.7s ease-in-out
+
+.cart-row:hover
+  opacity: 1
+  background-color: $accent-color
+  transition: 0.7s ease-in-out
+
+  .dish-price
+    color: $secondary-color
+
+  .dish-name
+    color: $secondary-color
+
+.small-dish
+  width: $small-dish-size
+  height: $small-dish-size
+
+.cart-row-content
+  margin: 0 auto
+  padding: 0
+
+.total-price
+  height: 2em
+  font-family: $titles-font
+  background-color: $ternary-color
+  font-size: 1.5em
+  text-align: center
+  transition: 0.5s ease-in-out
+
+.total-price:hover
+  background-color: $attention-color
+  color: $bright-text
+  transition: 0.5s ease-in-out
