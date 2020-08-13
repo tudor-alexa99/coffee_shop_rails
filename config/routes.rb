@@ -5,13 +5,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   get '/cart', to: 'carts#show'
+  post '/cart_items', to: 'cart_items#create'
   resources :users
   resources :home_page
   resources :dishes
-  resources :carts do
-    post :add_to_cart, on: :collection
-  end
-  # resources :carts, only: [:show] do
-  #   post 'add' # todo: check if this works for the add to cart button
-  # end
+  resources :cart_items
 end

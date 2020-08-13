@@ -6,14 +6,11 @@
       <p class="dish-category"><%= d[:category] %></p>
       <p class="dish-price">$ <%= d[:price] %>.00</p>
       <% if logged_in? %>
-<!--        todo: adauga 2 controllere -->
-        <%= form_with url: add_to_cart_carts_path, model: Cart.create do |f| %>
+        <%= form_with(scope: :cart_item, url: '/cart_items', method: 'post', local: true) do |f| %>
           <%= f.label :quantity %>
           <%= f.number_field :quantity %>
-
           <%= f.hidden_field :cart_id, value: current_user.cart.id %>
           <%= f.hidden_field :dish_id, value: d.id %>
-
           <%= f.submit 'Add to cart', class: 'btn btn-secondary mt-2' %>
         <% end %>
       <% end %>
@@ -25,8 +22,8 @@
         <%= f.text_field :title, placeholder: "Title" %>
         <%= f.text_field :category, placeholder: "Category" %>
         <%= f.text_field :price, placeholder: "Price" %>
-        <%= f.submit "Create", class: "submit-button" %>
         <%= f.file_field :image %>
+        <%= f.submit "Create", class: "submit-button" %>
       <% end %>
     </div>
   </div>

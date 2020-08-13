@@ -1,0 +1,7 @@
+<div id="cart-container">
+  <% @cart_items.each do |ci| %>
+    <div class="cart-item-box">
+      <%= image_tag ci.dish.image, class: "dish", alt: "dish" %>
+    </div>
+  <% end %>
+</div>
