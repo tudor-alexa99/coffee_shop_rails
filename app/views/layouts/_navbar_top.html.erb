@@ -12,12 +12,11 @@
     <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
     <li><a id="a-blog" href="#">BLOG</a></li>
     <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
-    <li><a id="a-contacts" href="#">CONTACTS</a></li>
-    <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
     <% if logged_in? %>
+      <li><%= link_to "CART", cart_items_path %></li>
+      <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
       <li><%= link_to "LOG OUT", logout_path, method: :delete %></li>
     <% else %>
-<!--      <li><%#= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>-->
       <li><%= link_to "LOG IN / SIGN UP", login_path %></li>
     <% end %>
   </ul>

@@ -1,1 +1,5 @@
-<%= render "cart_items/cart_content" %>
+<% if logged_in? %>
+  <%= render "cart_items/cart_content" %>
+<% else %>
+  <h1 class="centered-title">Sorry, you must log in to access your cart!</h1>
+<% end %>

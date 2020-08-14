@@ -4,5 +4,5 @@ class CartItem < ApplicationRecord
 
   validates :cart_id, presence: true
   validates :dish_id, presence: true
-  validates :quantity, presence: true
+  validates :quantity, presence: true, numericality: { greater_than: 0 }
 end

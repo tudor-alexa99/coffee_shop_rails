@@ -1,6 +1,8 @@
 class CartItemsController < ApplicationController
   def index
-    @cart_items = current_user.cart.cart_items
+    if logged_in?
+      @cart_items = current_user.cart.cart_items
+    end
   end
 
   def new
@@ -18,6 +20,7 @@ class CartItemsController < ApplicationController
       redirect_to root_path
     else
       flash[:danger] = 'Could not add item to the basket!'
+      redirect_to root_path
     end
   end
 
