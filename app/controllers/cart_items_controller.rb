@@ -31,5 +31,4 @@ class CartItemsController < ApplicationController
       # todo: fix require
       # params.permit(:cart_id, :dish_id, :quantity)
     end
-
 end
