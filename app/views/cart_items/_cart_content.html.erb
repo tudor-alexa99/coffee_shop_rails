@@ -1,0 +1,27 @@
+<% if @cart_items.empty? %>
+  <div class="empty-cart-container">
+    <%= image_tag "empty-cart.png", class: "empty-cart-image", alt: "Empty cart" %>
+  </div>
+  <h1 class="centered-title">Seems like your cart is empty!</h1>
+<% else %>
+  <% total_price = 0 %>
+  <div id="cart-container" class="container">
+    <% @cart_items.each do |ci| %>
+      <div class="row cart-row">
+        <div class="col cart-row-content">
+          <%= image_tag ci.dish.image, class: "dish small-dish", alt: "dish" %>
+        </div>
+        <div class="col">
+          <p class="dish-name centered-title "><%= ci.dish.title %></p>
+        </div>
+        <div class="col cart-row-content">
+          <p class="dish-category">Category: <%= ci.dish.category %></p>
+          <p class="dish-price">Price: $<%= ci.dish.price * ci.quantity %></p>
+          <p class="centered-title bg-info">Quantity: <%= ci.quantity %></p>
+        </div>
+        <% total_price += ci.dish.price * ci.quantity %>
+      </div>
+    <% end %>
+    <p class="total-price total-price-box">Total price: $<%= total_price %></p>
+<% end %>
+</div>
