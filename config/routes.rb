@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
 
   # admin
-  get '/admin', to: 'admin#index'
+  # get '/admin', to: 'admin#index'
 
   # resources
   resources :users, only: %i[show new create edit update]
@@ -27,5 +27,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users, only: %i[index destroy]
+    get '/', to: 'base#index'
   end
 end

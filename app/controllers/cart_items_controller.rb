@@ -13,6 +13,12 @@ class CartItemsController < ApplicationController
     @dish = Dish.find(params[:id])
   end
 
+  def destroy
+    cart_item = CartItem.find(params[:id])
+    CartItem.destroy(cart_item.id)
+    redirect_to '/cart_items'
+  end
+
   def create
     @cart_item = CartItem.new(cart_item_params)
     @cart_item.cart_id = current_user.cart.id

@@ -4,7 +4,6 @@
   </div>
   <h1 class="centered-title">Seems like your cart is empty!</h1>
 <% else %>
-  <% total_price = 0 %>
   <div id="cart-container" class="container">
     <% @cart_items.each do |ci| %>
       <div class="row cart-row">
@@ -19,9 +18,20 @@
           <p class="dish-price">Price: $<%= ci.dish.price * ci.quantity %></p>
           <p class="centered-title bg-info">Quantity: <%= ci.quantity %></p>
         </div>
-        <% total_price += ci.dish.price * ci.quantity %>
+
+        <div class="col">
+          <%= link_to "Remove Item", "/cart_items/#{ ci.id }", method: :delete %>
+          <%#= link_to "Remove Item", delete_cart_item_path(id: ci.id) %>
+        </div>
       </div>
     <% end %>
-    <p class="total-price total-price-box">Total price: $<%= total_price %></p>
+    <p class="total-price total-price-box">Total price: $
+      <% total_price = 0
+         @cart_items.each do |ci|
+           total_price += ci.dish.price * ci.quantity
+      %>
+      <% end %>
+      <%= total_price %>
+    </p>
 <% end %>
 </div>
