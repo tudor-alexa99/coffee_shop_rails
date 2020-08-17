@@ -20,12 +20,12 @@ Rails.application.routes.draw do
   get '/admin', to: 'admin#index'
 
   # resources
-  resources :users, only: %i[show new create edit]
+  resources :users, only: %i[show new create edit update]
   resources :home_page
   resources :dishes
   resources :cart_items
 
   namespace :admin do
-    resources :users, only: %i[index destroy edit]
+    resources :users, only: %i[index destroy]
   end
 end
