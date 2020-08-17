@@ -2,6 +2,8 @@ class HomePageController < ApplicationController
   def index
     @dish = Dish.new
     @dishes = Dish.all
-    @cart_items = CartItem.all
+    if logged_in?
+      @cart_items = current_user.cart.cart_items
+    end
   end
 end

@@ -10,7 +10,6 @@
           <div id="dish-control">
             <%= f.label :quantity %>
             <%= f.number_field :quantity, min: 1 %>
-            <%= f.hidden_field :cart_id, value: current_user.cart.id %>
             <%= f.hidden_field :dish_id, value: d.id %>
             <%= f.submit 'Add to cart', class: 'btn btn-secondary mt-2' %>
           </div>
