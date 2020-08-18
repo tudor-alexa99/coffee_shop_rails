@@ -24,15 +24,14 @@
         </div>
       </div>
     <% end %>
-    <p class="total-price total-price-box">Total price: $
+    <div class="total-price total-price-box">Total price: $
       <% total_price = 0
          @cart_items.each do |ci|
            total_price += ci.dish.price * ci.quantity
       %>
       <% end %>
       <%= total_price %>
-<!--      todo: Place order button-->
-      <button class="btn btn-outline-danger">Place order</button>
-    </p>
+      <%= button_to "Place order", new_order_path(total_price: total_price) %>
+    </div>
+  </div>
 <% end %>
-</div>

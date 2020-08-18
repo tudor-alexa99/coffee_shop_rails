@@ -1,6 +1,5 @@
 class Admin::UsersController < ApplicationController
   layout 'admin'
-  # todo: add IsAdmin field to users table
   def index
     @users = User.all
   end

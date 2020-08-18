@@ -8,17 +8,18 @@
     <li> <%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
     <li><a id="a-about" href="#">ABOUT</a></li>
     <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
-    <li><a id="a-service" href="#">SERVICE</a></li>
-    <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
     <% if is_admin? %>
       <li><%= link_to "ADMIN PAGE", admin_path, alt: "admin" %></li>
       <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
     <% end %>
     <% if logged_in? %>
-      <li><%= link_to "EDIT PROFILE", edit_user_path(current_user) %></li>
+      <li><%= link_to "CART", cart_items_path %></li>
       <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
 
-      <li><%= link_to "CART", cart_items_path %></li>
+      <li><%= link_to "MY ORDERS", orders_path %></li>
+      <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
+
+      <li><%= link_to "EDIT PROFILE", edit_user_path(current_user) %></li>
       <li><%= image_tag "orange_bullet_16.png", alt: "bullet", class: "bullet" %></li>
 
       <li><%= link_to "LOG OUT", logout_path, method: :delete %></li>
