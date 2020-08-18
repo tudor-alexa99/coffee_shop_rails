@@ -1,0 +1,12 @@
+<h1 class="centered-title">All orders:</h1>
+<% @orders.each do |o| %>
+  <div class="orders-container">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-action list-group-item-primary">User name: <%= o.user.name %></li>
+      <li class="list-group-item list-group-item-action list-group-item-primary">Order id: <%= o.id %></li>
+      <li class="list-group-item list-group-item-action list-group-item-primary">Total
+        price: <%= o.total_price %></li>
+      <li class="list-group-item list-group-item-action list-group-item-primary">Status: <%= o.finalized ? "Processed" : "Pending" %></li>
+    </ul>
+  </div>
+<% end %>

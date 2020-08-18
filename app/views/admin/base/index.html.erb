@@ -1,5 +1,6 @@
 <h1 class="centered-title">This is the admin index page</h1>
 
 <nav class="navbar navbar-light bg-light">
-  <%= link_to "Users list", admin_users_path %>
+  <%= link_to "Users list", admin_users_path, class: "navbar-brand" %>
+  <%= link_to "All Orders", admin_orders_path, class:"navbar-brand" %>
 </nav>
