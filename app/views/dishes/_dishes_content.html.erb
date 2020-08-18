@@ -17,15 +17,17 @@
       <% end %>
     </div>
   <% end %>
-  <div class="dish-container">
-    <div class="form-container">
-      <%= form_with model: @dish, local: true do |f| %>
-        <%= f.text_field :title, placeholder: "Title" %>
-        <%= f.text_field :category, placeholder: "Category" %>
-        <%= f.text_field :price, placeholder: "Price" %>
-        <%= f.file_field :image %>
-        <%= f.submit "Create", class: "submit-button" %>
-      <% end %>
+  <% if is_admin? %>
+    <div class="dish-container">
+      <div class="form-container">
+        <%= form_with model: @dish, local: true do |f| %>
+          <%= f.text_field :title, placeholder: "Title" %>
+          <%= f.text_field :category, placeholder: "Category" %>
+          <%= f.text_field :price, placeholder: "Price" %>
+          <%= f.file_field :image %>
+          <%= f.submit "Create", class: "submit-button" %>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
