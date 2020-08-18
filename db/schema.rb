@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_13_095210) do
+ActiveRecord::Schema.define(version: 2020_08_18_074339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,20 +58,6 @@ ActiveRecord::Schema.define(version: 2020_08_13_095210) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "order_items", force: :cascade do |t|
-    t.integer "dish_id"
-    t.integer "order_id"
-    t.integer "quantity"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -79,6 +65,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_095210) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.string "remember_digest"
+    t.boolean "is_admin"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

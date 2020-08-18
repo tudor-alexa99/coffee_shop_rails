@@ -9,7 +9,6 @@ class AddForeignKeyConstraintToActiveStorageAttachmentsForBlobId < ActiveRecord:
   end
 
   def down
-    # todo: added the down method, I require some feedback on this
     remove_foreign_key :active_storage_blobs, :active_storage_blobs, column: :blob_id
   end
 end

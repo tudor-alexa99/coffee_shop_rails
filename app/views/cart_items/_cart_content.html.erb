@@ -21,7 +21,6 @@
 
         <div class="col">
           <%= link_to "Remove Item", "/cart_items/#{ ci.id }", method: :delete %>
-          <%#= link_to "Remove Item", delete_cart_item_path(id: ci.id) %>
         </div>
       </div>
     <% end %>
@@ -32,6 +31,8 @@
       %>
       <% end %>
       <%= total_price %>
+<!--      todo: Place order button-->
+      <button class="btn btn-outline-danger">Place order</button>
     </p>
 <% end %>
 </div>
