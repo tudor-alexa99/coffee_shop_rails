@@ -1,0 +1,16 @@
+<h1 class="centered-title">Order details:</h1>
+<h2 class="centered-title text-muted">Order number #<%= @order.id %></h2>
+<div class="container">
+  <div class="row">
+    <% @order_items.each do |oi| %>
+      <div class="col-12 col-md-4">
+        <h5 class="text-danger">Status: <%= @order.finalized ? "Processed" : "Pending" %></h5>
+        <ul class="list-group">
+          <li class="list-group-item active">Dish: <%= oi.dish.title %></li>
+          <li class="list-group-item list-group-item-primary list-group-item-danger">Total Price: <%= oi.dish.price * oi.quantity %></li>
+        </ul>
+        <div class="col-12 col-md-4"><%= image_tag oi.dish.image, alt: "Dish image", class: "dish small-dish" %></div>
+      </div>
+    <% end %>
+  </div>
+</div>

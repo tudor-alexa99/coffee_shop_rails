@@ -2,13 +2,14 @@
   <h1>Sorry, seems like you have no order placed yet!</h1>
 <% else %>
   <h1 class="centered-title">Your current orders:</h1>
-  <% @orders.each do |o| %>
+  <% @orders.reverse_each do |o| %>
     <div class="orders-container">
       <ul class="list-group">
         <li class="list-group-item list-group-item-action list-group-item-primary">Order id: <%= o.id %></li>
         <li class="list-group-item list-group-item-action list-group-item-primary">Total
           price: <%= o.total_price %></li>
         <li class="list-group-item list-group-item-action list-group-item-primary">Status: <%= o.finalized ? "Processed" : "Pending" %></li>
+        <li class="list-group-item-dark"><%= link_to "See order details", order_path(o.id) %></li>
       </ul>
     </div>
   <% end %>

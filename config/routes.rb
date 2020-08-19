@@ -36,7 +36,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users, only: %i[index destroy]
-    resources :orders, only: %i[edit patch index]
+    resources :orders, only: %i[edit index update]
     get '/', to: 'base#index'
   end
 end
