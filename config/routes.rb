@@ -16,9 +16,6 @@ Rails.application.routes.draw do
   # users
   get '/signup', to: 'users#new'
 
-  # admin
-  # get '/admin', to: 'admin#index'
-
   # orders
   get '/orders', to: 'orders#index'
   post 'orders/new', to: 'orders#create'

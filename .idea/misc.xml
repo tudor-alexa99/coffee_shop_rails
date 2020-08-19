@@ -3,5 +3,8 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/views/cart_items/_form.html.erb" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="ruby-2.6.6-p146" project-jdk-type="RUBY_SDK" />
 </project>
