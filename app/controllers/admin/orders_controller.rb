@@ -1,10 +1,10 @@
 class Admin::OrdersController < ApplicationController
+  before_action :check_logged_in_as_admin
+
   layout 'admin'
 
   def index
-    if is_admin?
       @orders = Order.all
-    end
   end
 
   def edit
