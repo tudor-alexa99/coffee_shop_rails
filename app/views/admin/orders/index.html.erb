@@ -1,17 +1,21 @@
 <h1 class="centered-title">All orders:</h1>
-<% @orders.each do |o| %>
-  <div class="orders-container">
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-action list-group-item-primary">User name: <%= o.user.name %></li>
-      <li class="list-group-item list-group-item-action list-group-item-primary">Order id: <%= o.id %></li>
-      <li class="list-group-item list-group-item-action list-group-item-primary">Total
-        price: <%= o.total_price %></li>
-      <li class="list-group-item list-group-item-action list-group-item-primary">Status: <%= o.finalized ? "Processed" : "Pending" %></li>
-      <% unless o.finalized? %>
-        <li class="list-group-item active"><%= button_to "Process Order", admin_order_path(o.id), method: :patch %></li>
-      <% else %>
-        <li class="list-group-item list-group-item-success"><h4 class="text-muted">Order processed!</h4></li>
-      <% end %>
-    </ul>
+<div class="container admin-orders-container">
+  <div class="col col-md-6">
+    <% @orders.each do |o| %>
+      <div class="orders-container">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action list-group-item-primary">User name: <%= o.user.name %></li>
+          <li class="list-group-item list-group-item-action list-group-item-primary">Order id: <%= o.id %></li>
+          <li class="list-group-item list-group-item-action list-group-item-primary">Total
+            price: <%= o.total_price %></li>
+          <li class="list-group-item list-group-item-action list-group-item-primary">Status: <%= o.finalized ? "Processed" : "Pending" %></li>
+          <% unless o.finalized? %>
+            <li class="list-group-item active"><%= button_to "Process Order", admin_order_path(o.id), method: :patch %></li>
+          <% else %>
+            <li class="list-group-item list-group-item-success"><h4 class="text-muted">Order processed!</h4></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

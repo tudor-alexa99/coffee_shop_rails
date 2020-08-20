@@ -195,8 +195,6 @@ main
   min-width: $dish-size
   padding: 10px 0 0
   box-shadow: 9px 15px 12px -15px rgba(130, 130, 130, 0.75)
-  //background-color: $secondary-color
-  max-height: 450px
   cursor: pointer
   transition: all 0.7s ease-in-out
 
@@ -231,6 +229,12 @@ main
   transform: scale(1.05)
   z-index: 1.1
 
+
+::-webkit-scrollbar
+  width: 1px
+  background-color: $primary-color
+
+
 @media (max-width: 1000px)
   body
     margin: 0
@@ -253,5 +257,4 @@ main
 
 @media screen and (max-width: 500px)
   body
-    width: min-content
     min-height: 100vh

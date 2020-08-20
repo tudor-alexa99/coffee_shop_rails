@@ -58,6 +58,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    animate.css-rails (3.2.0)
     autoprefixer-rails (9.8.6.1)
       execjs
     aws-eventstream (1.1.0)
@@ -244,6 +245,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  animate.css-rails (~> 3.2)
   aws-sdk-s3
   bcrypt
   bootsnap (>= 1.4.2)
