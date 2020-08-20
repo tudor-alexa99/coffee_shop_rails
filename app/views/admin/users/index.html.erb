@@ -1,13 +1,17 @@
 <% provide(:title, 'All users') %>
-<div class="container">
-  <h1 class="centered-title">All users</h1>
-</div>
+<h1 class="centered-title">All users</h1>
 <div class="container admin-users-container">
-  <% @users.each do |user| %>
-    <ul class="list-group-horizontal animated fadeInDown">
-      <li class="list-group-item"><%= user.name %></li>
-      <li class="list-group-item"><%= user.email %></li>
-      <li class="list-group-item"><%= link_to "Delete user", admin_user_url(user), method: :delete, data: {confirm: "Are you sure?"} %></li>
-    </ul>
-  <% end %>
+  <div class="col col-md-6">
+  </div>
+  <div class="col col-md-6">
+    <% @users.each do |user| %>
+      <ul class="list-group-horizontal animated fadeInDown">
+        <li class="list-group-item"><%= user.name %></li>
+        <li class="list-group-item"><%= user.email %></li>
+        <% unless user.is_admin? %>
+          <li class="list-group-item"><%= link_to "Delete user", admin_user_url(user), method: :delete, data: {confirm: "Are you sure?"} %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 </div>
