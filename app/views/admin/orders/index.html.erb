@@ -10,7 +10,7 @@
             price: <%= o.total_price %></li>
           <li class="list-group-item list-group-item-action list-group-item-primary">Status: <%= o.finalized ? "Processed" : "Pending" %></li>
           <% unless o.finalized? %>
-            <li class="list-group-item active"><%= button_to "Process Order", admin_order_path(o.id), method: :patch %></li>
+            <li class="list-group-item active"><%= button_to "Process Order", admin_order_path(o.id), method: :patch, class: "btn btn-primary" %></li>
           <% else %>
             <li class="list-group-item list-group-item-success"><h4 class="text-muted">Order processed!</h4></li>
           <% end %>
