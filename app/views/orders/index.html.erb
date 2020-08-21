@@ -13,7 +13,7 @@
                 price: <%= o.total_price %></li>
               <li class="list-group-item list-group-item-action list-group-item-primary">Status: <%= o.finalized ? "Processed" : "Pending" %></li>
               <li class="list-group-item list-group-item-dark"><%= link_to "See order details", order_path(o.id),class: "btn btn-block btn-warning" %></li>
-              <%= image_tag generate_qr(order_path(o.id)), class: "qr-code" %>
+              <%= image_tag generate_qr(order_url(o.id)), class: "qr-code" %>
             </ul>
           </div>
         <% end %>
