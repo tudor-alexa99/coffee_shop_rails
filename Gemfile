@@ -34,8 +34,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'bootstrap-sass'
 
-gem 'animate.css-rails', '~> 3.2'
-
 gem "aws-sdk-s3", require: false
 
 gem 'rspec', '~> 3.9'
