@@ -1,8 +1,6 @@
 class OrdersController < ApplicationController
   def index
-    if logged_in?
-      @orders = current_user.orders
-    end
+    @orders = current_user.orders
   end
 
   def new
