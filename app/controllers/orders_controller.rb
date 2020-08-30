@@ -8,13 +8,16 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = current_user.orders.find(params[:id])
+    if logged_in?
+      @order = current_user.orders.find(params[:id])
+    else
+      @order = Order.find_by(id: params[:id])
+    end
     @order_items = @order.order_items
   end
 
   def destroy
-    order = Order.find(prams[:id])
-    Order.destroy(order.id)
+    Order.destroy(current_user.orders.find(prams[:id]))
     redirect_to '/orders'
   end
 
@@ -29,7 +32,7 @@ class OrdersController < ApplicationController
       copy_cart_items(@cart_items, @order.id)
       flash[:success] = 'Your order has been placed!'
       redirect_to '/cart_items'
-      @cart_items.delete_all
+      @cart_items.destroy_all
     else
       flash[:danger] = 'Could not process order!'
       redirect_to '/cart_items'
