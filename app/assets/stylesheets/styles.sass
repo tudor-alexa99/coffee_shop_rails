@@ -233,11 +233,9 @@ main
   transform: scale(1.05)
   z-index: 1.1
 
-
 ::-webkit-scrollbar
   width: 1px
   background-color: $primary-color
-
 
 @media (max-width: 1000px)
   body
@@ -249,26 +247,37 @@ main
     grid-template-columns: $dish-size $dish-size $dish-size
     width: 3 * $dish-size
 
-@media (max-width: 750px)
+@media (max-width: 925px)
   body
     margin: 0
     min-height: 100vh
+
+  header
+    ul
+      display: grid
 
   #all-dishes-container
     display: grid
     grid-template-columns: $dish-size $dish-size
     width: 2 * $dish-size
 
-@media screen and (max-width: 500px)
+@media (max-width: 750px)
   body
+    margin: 0
     min-height: 100vh
+
+@media screen and (max-width: 500px)
+  .bullet
+    display: none
+
+  #all-dishes-container
+    min-width: 0
 
 @media screen and (max-width: 450px)
   body
     min-height: 100vh
 
-    #all-dishes-container
-      display: grid
-      grid-template-columns: $dish-size
-      width: 2 * $dish-size
-
+  #all-dishes-container
+    grid-template-columns: $dish-size
+    width: $dish-size
+    justify-content: center
