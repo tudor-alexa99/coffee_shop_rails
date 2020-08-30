@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: tudor
+  api_key: '332863337355192'
+  api_secret: EQN5bjKPl5vstT3CffUXOPo7kRQ
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: tudor
+  api_key: '332863337355192'
+  api_secret: EQN5bjKPl5vstT3CffUXOPo7kRQ
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: tudor
+  api_key: '332863337355192'
+  api_secret: EQN5bjKPl5vstT3CffUXOPo7kRQ
+  enhance_image_tag: true
+  static_file_support: false

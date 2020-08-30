@@ -27,7 +27,7 @@
           <%= f.text_field :title, placeholder: "Title" %>
           <%= f.text_field :category, placeholder: "Category" %>
           <%= f.text_field :price, placeholder: "Price" %>
-          <%= f.file_field :image%>
+          <%= f.file_field :image, direct_upload: true%>
           <%= f.submit "Create", class: "submit-button btn btn-danger" %>
         <% end %>
       </div>

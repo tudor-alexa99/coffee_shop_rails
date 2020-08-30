@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'barby', '~> 0.6.8'
 
+gem 'cloudinary', '~> 1.17', '>= 1.17.1'
+gem 'carrierwave', '~> 2.1'
+
 gem 'rqrcode', '~> 1.1', '>= 1.1.2'
 
 # Use Active Storage variant
